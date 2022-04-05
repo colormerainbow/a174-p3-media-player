@@ -1,15 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTDM174 Project3 Margaret Au</title>
+    <title>ARTDM174 Lab5 HTML5 Video with JS cuepoints (demo)</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js" defer></script>
+    <script src="js/video_helpers.js" defer></script>
+    <script type="module" src="js/main.js" defer></script>
 </head>
+
 <body>
-    <h1>ARTDM174 Project 3: Dynamic Media Player</h1>
-    <p>Under Construction -- Check back again later for updates.</p>
+    <h1>The Benefits of Protein on Weight Loss</h1>
+    <h2>HTML5 Video with JS synchronized cuepoints for demo</h2>
+    <!--
+    <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
+-->
+
+    <main id="container">
+
+        <section class="col1">
+
+            <video id="vid" width="352" controls>
+                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
+                    type="video/mp4" />
+
+                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm"
+                    type="video/webm" />
+                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv"
+                    type="video/ogg" />
+
+                <track kind="captions" label="On" srclang="en" src="./captions/katalyst.vtt" default />
+
+                <!-- fallback to text -->
+                <h2>The Benefits of Protein on Weight Loss</h2>
+                <p>Here is a link to the video file itself <a
+                        href="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Video
+                        File Here</a></p>
+                <p>Hi, I'm Kathy from Katalyst Fitness and Nutrition, and today I wanted to talk to you about protein
+                    and why it's so beneficial for weight loss.
+                </p>
+                <p>So, when you're trying to lose weight, protein is the key to getting you to your goal.</p>
+            </video>
+
+            <div id="controls">
+                <form id="video_form">
+                    <fieldset>
+                        <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)" value="Play" />
+                        <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)"
+                            value="Pause" />
+                        <input type="button" id="stop_button" class="ctl_btn" onclick="stopVideo(vid)"
+                            value="Stop" />
+                        <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
+                        <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
+                        <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)"
+                            value="Beginning" />
+                        <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
+                    </fieldset>
+                    <fieldset>
+                        <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)" value="Fast Forward >>" />
+                        <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
+                        <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
+                    </fieldset>
+                    <fieldset>
+                        <select id="video_select">
+                            <option>Select a video to play...</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">
+                                Katalyst (mp4)</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">
+                                Katalyst (webm)</option>
+                            <option
+                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">
+                                Katalyst (ogv)</option>
+                        </select>
+                    </fieldset>
+                    <fieldset>
+                        <p>Video Segments</p>
+                        <input type="button" class="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
+                        <input type="button" class="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
+                    </fieldset>
+
+                </form>
+            </div>
+
+            <div class="pop hide">
+                <p>Test This!</p>
+            </div>
+        </section>
+
+        <section class="col2">
+            <h4>Placeholder</h4>
+            <iframe id="web" src=""></iframe>
+        </section>
+
+    </main>
+
+
+
+
 </body>
+
 </html>
