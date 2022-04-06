@@ -52,7 +52,7 @@ transcript_en.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/katalyst.vtt", display);
+        webvttTranscript("captions/synergy.vtt", display);
         console.log(display);
     });
 
