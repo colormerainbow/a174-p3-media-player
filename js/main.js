@@ -24,16 +24,61 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     cueTimer.setup("vid", myCues);
 
+    /* detect the video format and text-track language selected */
     const vid = document.querySelector("#vid");
-    const selectList = document.querySelector("#video_select");
+    const selectVid = document.querySelector("#video_select");
+    const selectTxt = document.querySelector("#text-track");
 
-    selectList.addEventListener("change", (e) => {
+    /*detect the language of the transcript selected and display it*/
+    const display = document.getElementById("transcript");
+    const transcript_en = document.getElementById("transcript-en");
+    const transcript_es = document.getElementById("transcript-es");
+    const showHide = document.getElementById("show-hide");
+
+
+    selectVid.addEventListener("change", (e) => {
         selectVideo(e, vid);
     });
 
+    selectTxt.addEventListener("change", (e) => {
+        const id = e.target.value;
+        selectTrack(e, vid, id);
+    });
+
+/* display the selected language transcript; clear display if no transcript selected */
+
+
+transcript_en.addEventListener(
+    "click",
+    function (e) {
+        e.preventDefault();
+        webvttTranscript("captions/katalyst.vtt", display);
+        console.log(display);
+    });
+
+transcript_es.addEventListener(
+    "click",
+    function (e) {
+        e.preventDefault();
+        webvttTranscript("captions/katalystes.vtt", display);
+    });
+
+showHide.addEventListener(
+    "click",
+    function (e) {
+        e.preventDefault();
+        webvttTranscript("captions/katalyst.vtt", display);
+         if (e.target.innerHTML == "Show Transcript") {
+            e.target.innerHTML = "Hide Transcript";
+            display.style.display = "block";
+            console.log(e.target.innerHTML);
+        } else {
+            e.target.innerHTML = "Show Transcript";
+            display.style.display = "none";
+            console.log(e.target.innerHTML);
+        }
+    });
 });
-
-
 
 //the custom callback functions to trigger when a cuepoint is hit.
 

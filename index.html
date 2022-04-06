@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARTDM174 Lab5 HTML5 Video with JS cuepoints (demo)</title>
+    <title>ARTDM174 P3 AV Player</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/video_helpers.js" defer></script>
-    <script type="module" src="js/main.js" defer></script>
+    <script src="js/transcript.js" defer></script>  
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
-    <h1>The Benefits of Protein on Weight Loss</h1>
-    <h2>HTML5 Video with JS synchronized cuepoints for demo</h2>
+    <h1>Healthy Within</h1>
+    <h2>Let your inner health flourish; expand your health potential through nutritional knowledge and health empowerment</h2>
+    <h2>The Benefits of Protein on Weight Loss</h2>
     <!--
     <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
 -->
@@ -24,14 +26,16 @@
 
             <video id="vid" width="352" controls>
                 <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
-                    type="video/mp4" />
+                    type="video/mp4">
 
                 <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm"
-                    type="video/webm" />
+                    type="video/webm">
                 <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv"
-                    type="video/ogg" />
+                    type="video/ogg">
 
-                <track kind="captions" label="On" srclang="en" src="./captions/katalyst.vtt" default />
+                <track id="en" kind="captions" label="English (captions)" srclang="en" src="./captions/synergy.vtt" default>
+
+                <track id="es" kind="subtitles" label="Espanol" srclang="es" src="./captions/katalystes.vtt">
 
                 <!-- fallback to text -->
                 <h2>The Benefits of Protein on Weight Loss</h2>
@@ -75,8 +79,15 @@
                             <option
                                 value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">
                                 Katalyst (ogv)</option>
+                                
                         </select>
-                    </fieldset>
+
+						<select id="text-track">
+							<option>Select a subtitle language...</option>
+							<option value="es">Espanol</option>
+							<option value="en">English (captions)</option>
+						</select>
+					</fieldset>
                     <fieldset>
                         <p>Video Segments</p>
                         <input type="button" class="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
@@ -93,6 +104,14 @@
             <div class="pop hide">
                 <p>Test This!</p>
             </div>
+
+            <div class="show-captions">
+				<h3><a id="show-hide" href="#">Show Transcript</a></h3>
+				<a id="transcript-en" href="#">English</a>
+				<a id="transcript-es" href="#">Spanish</a>
+				<div id="transcript"> something</div>
+			</div>
+
         </section>
 
         <section class="col2">
