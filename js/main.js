@@ -52,7 +52,7 @@ transcript_en.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/synergy.vtt", display);
+        webvttTranscript("captions/katalyst2.vtt", display);
         console.log(display);
     });
 
@@ -60,14 +60,14 @@ transcript_es.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/katalystes.vtt", display);
+        webvttTranscript("captions/synergy.vtt", display);
     });
 
 showHide.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/katalyst.vtt", display);
+        webvttTranscript("captions/katalyst2.vtt", display);
          if (e.target.innerHTML == "Show Transcript") {
             e.target.innerHTML = "Hide Transcript";
             display.style.display = "block";
