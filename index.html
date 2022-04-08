@@ -12,17 +12,45 @@
     <script type="module" src="js/main.js"></script>
 </head>
 
-<body>
-    <h1>Healthy Within</h1>
-    <h2>Let your inner health flourish; expand your health potential through nutritional knowledge and health empowerment</h2>
-    <h2>The Benefits of Protein on Weight Loss</h2>
+<body id="mainbody">
+
+    <header>
+        <div class="header-banner">
+            <h1>Healthy Within</h1>
+            <nav class="site-nav">
+                <ul>
+                    <li><a class="home-pg" href="#">Home</a></li>
+                    <li><a class="class-pg" href="#">Nutrition Primer</a></li>
+                    <li><a class="about-pg" href="#">About</a></li>
+                    <li><a class="contact-pg" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="tag-line">
+        <h2>Expand your health potential and let your inner health flourish through nutritional knowledge empowerment</h2>
+    </section>
+
+<main id="container" class="hero">
+
+    <section class="lesson-plan">
+    <h2>The Benefits of Protein on Weight Management</h2>
+    <div class="lesson-container">
+        <h3>
+            Key Messages:
+        </h3>
+        <div class="lesson-notes"></div>
+        <div class="col2">
+            <h4>Placeholder</h4>
+            <iframe id="web" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+    </section>
     <!--
     <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
 -->
-
-    <main id="container">
-
-        <section class="col1">
+    <section class="col1">
 
             <video id="vid" width="352" controls>
                 <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
@@ -104,7 +132,7 @@
             <div class="pop hide">
                 <p>Test This!</p>
             </div>
-
+<!--remove this section and show transcripts on a link to a diff page or fix vtt files-->
             <div class="show-captions">
 				<h3><a id="show-hide" href="#">Show Transcript</a></h3>
 				<a id="transcript-en" href="#">English</a>
@@ -112,14 +140,14 @@
 				<div id="transcript">content here</div>
 			</div>
 
-        </section>
+     </section>
 
-        <section class="col2">
+    <section class="col2">
             <h4>Placeholder</h4>
             <iframe id="web" src=""></iframe>
-        </section>
+    </section>
 
-    </main>
+</main>
 
 
 
