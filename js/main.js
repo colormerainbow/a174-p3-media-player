@@ -83,31 +83,31 @@ showHide.addEventListener(
 //the custom callback functions to trigger when a cuepoint is hit.
 
 function func1() {
-    document.querySelector("#vid").style = "outline : 10px solid #006d77";
+    document.querySelector("#vid").style = "outline : 7px solid #ff5964";
 }
 function func10() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Protein";
 }
 function func2() {
-    let pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Proteins are chains of amino acids.</p>";
-    document.querySelector(".pop").classList.toggle("hide");
+    let pop = document.querySelector(".pop1");
+ //   pop.innerHTML = "<p>Proteins are chains of amino acids.</p>";
+    document.querySelector(".pop1").classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop1").classList.toggle("hilight");
+    }, 5000);
 }
 function func3() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Essential_amino_acid";
 }
 function func40() {
-    let pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
-    document.querySelector(".pop").classList.toggle("hide");
+    let pop = document.querySelector(".pop2");
+//    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
+    document.querySelector(".pop2").classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop2").classList.toggle("hilight");
+    }, 5000);
 }
 
 function func4() {
@@ -120,57 +120,57 @@ function func5() {
         "https://www.webmd.com/food-recipes/protein";
 }
 function func50() {
-    let pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>3500 calories = 1 pound!</p>";
-    document.querySelector(".pop").classList.toggle("hide");
+    let pop = document.querySelector(".pop5");
+//    pop.innerHTML = "<p>3500 calories = 1 pound!</p>";
+    document.querySelector(".pop5").classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop5").classList.toggle("hilight");
+    }, 5000);
 }
 
 function func6() {
     document.querySelector("#web").src = "https://www.medicalnewstoday.com/articles/protein-intake";
 }
 function func60() {
-    let pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Caution: <br>Excessive protein can be detrimental.</p>";
-    document.querySelector(".pop").classList.toggle("hide");
+    let pop = document.querySelector(".pop7");
+//    pop.innerHTML = "<p>Caution: <br>Excessive protein can be detrimental.</p>";
+    document.querySelector(".pop7").classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop7").classList.toggle("hilight");
+    }, 5000);
 }
 
 function func7() {
-    const pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>RDA is 0.8g per kg (NOT per pound)!!</p>";
-    pop.classList.toggle("hide");
+    const pop = document.querySelector(".pop8");
+//    pop.innerHTML = "<p>RDA is 0.8g per kg (NOT per pound)!!</p>";
+    pop.classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop8").classList.toggle("hilight");
+    }, 5000);
 } 
 function func70() {
-    const pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Well, ATHLETES may need more protein.</p>";
-    pop.classList.toggle("hide");
+    const pop = document.querySelector(".pop9");
+//    pop.innerHTML = "<p>Well, ATHLETES may need more protein.</p>";
+    pop.classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop9").classList.toggle("hilight");
+    }, 5000);
 } 
 
 function func8() {
-    const pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Don't overdo it! <br> Calculate your protein needs.</p>";
-    pop.classList.toggle("hide");
+    const pop = document.querySelector(".pop10");
+ //   pop.innerHTML = "<p>Don't overdo it! <br> Calculate your protein needs.</p>";
+    pop.classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop10").classList.toggle("hilight");
+    }, 5000);
     document.querySelector("#web").src = "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein";
 }
 function func9() {
-    const pop = document.querySelector(".pop");
-    pop.innerHTML = "<p>Note - Clinical data is still not conclusive!</p>";
-    pop.classList.toggle("hide");
+    const pop = document.querySelector(".pop11");
+//    pop.innerHTML = "<p>Note - Clinical data is still not conclusive!</p>";
+    pop.classList.add("hilight");
     setTimeout(() => {
-        document.querySelector(".pop").classList.toggle("hide");
-    }, 2000);
+        document.querySelector(".pop11").classList.toggle("hilight");
+    }, 5000);
 }

@@ -17,14 +17,21 @@ peach highlight #e0afa0
 
 #wrapper {
     margin: 0 auto;
-    background-color: #c9ada7;
+//    background-color: #333533;
+    background: url(../images/foodwood4.jpg) fixed;
+    background-size: cover;
+    background-position: right;
     font-family: 'Inter', sans-serif;
     text-align: center;
 }
 
 header {
     color: #f4f2ed;
-    background-color:#22223b;
+  //  background-color:#22223b;
+  background: rgba(0, 0, 0, .6);
+// background: url(../images/veglineddark2.jpg) fixed;
+// background-size: cover;
+// background-position: top;
     padding: 2rem 0 1rem 0;
 }
 .site-nav a {
@@ -39,17 +46,17 @@ header {
   justify-content: space-around;
   list-style: none;
 }
-/*use a background image here and remove backgnd color from id wrapper
+/*use a background image here and remove backgnd color from id wrapper 
 .hero {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url(../images/bluewood.jpeg) fixed;
+  background: url(../images/sideborders.jpeg) fixed;
   background-size: cover;
-  background-position: right;
+  background-position: left;
   overflow-y: scroll;
-}
-*/
+} */
+
 
   h1,
   h2 {
@@ -58,13 +65,16 @@ header {
   }
   h3 {
     text-align: left;
+    padding-left: 1rem;
   }
 
 h4 {
   display: none;
 }
-   
+ 
 #container {
+//  background-color: #e2fdff;
+  background-color: #eef5db;
     display:grid;
     grid-gap: .5rem;
     grid-template-columns: repeat(6, 1fr);
@@ -72,15 +82,19 @@ h4 {
     margin:auto;
     max-width: 1024px;
   }
+  .tag-line {
+    grid-column: 1 / span 8;
+    padding: 1rem;
+  }
   .lesson-container {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: .5rem;
     grid-template-rows: repeat(8, 1fr);
     grid-column: 1 / span 2;
   }
   .video-container {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: .5rem;
     grid-template-rows: repeat(8, 1fr);
     grid-column: 3 / span 4;
   }
@@ -88,31 +102,43 @@ h4 {
     grid-row: 1;
   }
   .lesson-notes {
-    grid-row: 2 / span 4;
+    grid-row: 2 / span 2;
     border:1px solid black;
+    font-size: .85rem;
+    text-align: left;
   }
   .lesson-url {
-    grid-row: 6 / span 2;
+    grid-row: 4 / span 2;
     border:1px solid black;
+    font-size: .85rem;
+    text-align: left;
   }
   .vid-window {
-    grid-row: 1/span 4;
+    grid-row: 1/span 3;
     border:1px solid black;
-    height: fit-content;
+ //   height: fit-content;
+    padding: 3rem 0 0 0;
   }
   .web-links {
-    grid-row: 5 / span 8;
+    grid-row: 4 / span 4;
     border:1px solid black;
     height: 45vh;
   }
   #vid {
     width:500px;
-    height:300px;
+    height:280px;
 
  //     width:352px;
  //     height:288px;
   }
-  
+  #controls {
+    padding: 1rem;
+  }
+  .transcript-link {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+  }
   iframe {
       width:100%;
       height:45vh;
@@ -153,7 +179,7 @@ h4 {
     background-color: #a8dadc;
     font-weight: bold;
   }
-  
+  /*
   .pop {
       position:absolute;
       top:0;
@@ -172,7 +198,13 @@ h4 {
     opacity:0;
     transition: all 3s;
   }
-  
+  */
+  .hilight {
+   transform: scale(1.1);
+    color: #fff;
+    background: rgba(0, 0, 0, .6);
+    transition: all 1s ease-in-out;
+  }
     /*
   @media screen and (max-width:600px) {
     #container {

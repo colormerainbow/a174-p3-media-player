@@ -27,21 +27,37 @@
             </nav>
         </div>
     </header>
-
+<!--
     <section class="tag-line">
-        <h2>Expand your health potential and let your inner health flourish through nutritional knowledge empowerment</h2>
+        <h2>Expand your health potential and let your inner health flourish through nutritional knowledge</h2>
     </section>
-
+-->
     <main id="container">
-
+        <section class="tag-line">
+            <h2>Expand your health potential &amp; let your inner health flourish through nutritional knowledge</h2>
+        </section>
     <section class="lesson-container">
+
         <h2 class="lesson-title">The Benefits of Protein on Weight Management</h2>
+
         <div class="lesson-notes">
             <h3>
                 Key Messages:
             </h3>
             <ul>
-                <li>Proteins are chains of amino acids</li>
+                <li class="pop1">Proteins are chains of amino acids, the building blocks of all cells.</li>
+                <li class="pop2">Complete Protein food sources provide all 9 essential amino acids in the right balance.</li>
+                <li class="pop3">Basal metabolic rate: amount of calories you burn at rest.</li>
+                <li class="pop4">Thermic effect: amount of calories used to digest proteins is higher than for fats or carbs. Can amount up to 80-100 more calories burned each day.</li>
+                <li class="pop5">3500 calories = 1 pound of body weight.</li>
+                <li class="pop6">A higher satiety index food is more filling and may prevent hunger longer.</li>
+                <li class="pop7">Caution: Excessive protein can be detrimental.</li>
+                <li class="pop8">RDA is 0.8g per kg (NOT per pound)!!</li>
+                <li class="pop9">Athletes, body builders, and people in recovery may need more protein.</li> 
+                <li class="pop10">Don't overdo it! Calculate your protein needs to prevent excessive intake.</li>
+                <li class="pop11">Clinical data for high protein diets leading to weight loss is still not conclusive!</li>
+
+
             </ul>
         </div>
         <div class="lesson-url">
@@ -49,7 +65,12 @@
                 Explore Further:
             </h3>
             <ul>
-                <li>Amino Acids</li>
+                <li><a href="https://en.wikipedia.org/wiki/Protein">What are Proteins?</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Essential_amino_acid">What are Essential Amino Acids?</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Complete_protein">What is a Complete Protein?</a></li>
+                <li><a href="https://www.webmd.com/food-recipes/protein">How much protein do I need?</a></li>
+                <li><a href="https://www.medicalnewstoday.com/articles/protein-intake">Calculate your personal protein needs.</a></li>
+                <li><a href="https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein">Avoid excessive protein &amp; select balanced whole food sources.</a></li>
             </ul>
         </div>
     </section>
@@ -64,6 +85,7 @@
     <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
 -->
 <section class="video-container">
+
     <section class="vid-window">
 
             <video id="vid" width="352" controls>
@@ -111,7 +133,7 @@
                     </fieldset>
                     <fieldset>
                         <select id="video_select">
-                            <option>Select a video to play...</option>
+                            <option>Select a video format...</option>
                             <option
                                 value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">
                                 Katalyst (mp4)</option>
@@ -125,7 +147,7 @@
                         </select>
 
 						<select id="text-track">
-							<option>Select a subtitle language...</option>
+							<option>Captions / Subtitles...</option>
 							<option value="es">Espanol</option>
 							<option value="en">English (captions)</option>
 						</select>
@@ -139,21 +161,26 @@
                         <input type="button" class="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
                         <input type="button" class="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
                     </fieldset>
+                    <fieldset class="transcript-link">            
+                        <a href="#">English Transcript</a>
+                        <a href="#">Spanish Transcript</a>
+                    </fieldset>
 
                 </form>
             </div>
-
+<!-- remove this if no longer flashing messages up
             <div class="pop hide">
                 <p>Test This!</p>
             </div>
-<!--remove this section and show transcripts on a link to a diff page or fix vtt files-->
+            -->
+<!--remove this section and show transcripts on a link to a diff page or fix vtt files
             <div class="show-captions">
 				<h3><a id="show-hide" href="#">Show Transcript</a></h3>
 				<a id="transcript-en" href="#">English</a>
 				<a id="transcript-es" href="#">Spanish</a>
 				<div id="transcript">content here</div>
 			</div>
-
+        -->
     </section>
     <section class="web-links">
             <h4>Placeholder</h4>
