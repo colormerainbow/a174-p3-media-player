@@ -100,6 +100,13 @@ h4 {
   }
   .lesson-title {
     grid-row: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .guidance {
+    font-size: .8rem;
+    text-align: left;
+    padding: 0 .5rem 0 1rem;
   }
   .lesson-notes {
     grid-row: 2 / span 2;

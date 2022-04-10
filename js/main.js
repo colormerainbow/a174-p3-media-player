@@ -7,17 +7,20 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     var myCues = [
         { seconds: 2, callback: func1 },
-        { seconds: 12, callback: func10 },
-        { seconds: 41, callback: func2 },
+        { seconds: 12, callback: func11 },
+        { seconds: 26, callback: func2 },
         { seconds: 44, callback: func3 },
-        { seconds: 57, callback: func40 },
-        { seconds: 61, callback: func4 }, 
+        { seconds: 57, callback: func4 },
+        { seconds: 61, callback: func41 },
+        { seconds: 70, callback: func42 },  
         { seconds: 78, callback: func5 },
-        { seconds: 99, callback: func50 },
+        { seconds: 85, callback: func51 },
+        { seconds: 96, callback: func52 },
+        { seconds: 104, callback: func53 },
         { seconds: 110, callback: func6 },
-        { seconds: 125, callback: func60 },
+        { seconds: 125, callback: func61 },
         { seconds: 156, callback: func7 },
-        { seconds: 163, callback: func70 },
+        { seconds: 163, callback: func71 },
         { seconds: 168, callback: func8 },
         { seconds: 174, callback: func9 },
     ];
@@ -52,7 +55,7 @@ transcript_en.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/synergy.vtt", display);
+        webvttTranscript("captions/katalyst.vtt", display);
         console.log(display);
     });
 
@@ -60,7 +63,7 @@ transcript_es.addEventListener(
     "click",
     function (e) {
         e.preventDefault();
-        webvttTranscript("captions/synergy.vtt", display);
+        webvttTranscript("captions/katalystes.vtt", display);
     });
 
 showHide.addEventListener(
@@ -85,7 +88,7 @@ showHide.addEventListener(
 function func1() {
     document.querySelector("#vid").style = "outline : 7px solid #ff5964";
 }
-function func10() {
+function func11() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Protein";
 }
@@ -95,49 +98,72 @@ function func2() {
     document.querySelector(".pop1").classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop1").classList.toggle("hilight");
-    }, 5000);
+    }, 4500);
 }
 function func3() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Essential_amino_acid";
 }
-function func40() {
+function func4() {
     let pop = document.querySelector(".pop2");
 //    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
     document.querySelector(".pop2").classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop2").classList.toggle("hilight");
-    }, 5000);
+    }, 4500);
 }
 
-function func4() {
+function func41() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Complete_protein";
 } 
+function func42() {
+    let pop = document.querySelector(".pop3");
+//    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
+    document.querySelector(".pop3").classList.add("hilight");
+    setTimeout(() => {
+        document.querySelector(".pop3").classList.toggle("hilight");
+    }, 4500);
+}
 
 function func5() {
     document.querySelector("#web").src =
         "https://www.webmd.com/food-recipes/protein";
 }
-function func50() {
+function func51() {
+    let pop = document.querySelector(".pop4");
+//    pop.innerHTML = "<p>thermic effect</p>";
+    document.querySelector(".pop4").classList.add("hilight");
+    setTimeout(() => {
+        document.querySelector(".pop4").classList.toggle("hilight");
+    }, 4500);
+}
+function func52() {
     let pop = document.querySelector(".pop5");
 //    pop.innerHTML = "<p>3500 calories = 1 pound!</p>";
     document.querySelector(".pop5").classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop5").classList.toggle("hilight");
-    }, 5000);
+    }, 4000);
 }
-
+function func53() {
+    let pop = document.querySelector(".pop6");
+//    pop.innerHTML = "<p>satiety</p>";
+    document.querySelector(".pop6").classList.add("hilight");
+    setTimeout(() => {
+        document.querySelector(".pop6").classList.toggle("hilight");
+    }, 4000);
+}
 function func6() {
     document.querySelector("#web").src = "https://www.medicalnewstoday.com/articles/protein-intake";
 }
-function func60() {
+function func61() {
     let pop = document.querySelector(".pop7");
 //    pop.innerHTML = "<p>Caution: <br>Excessive protein can be detrimental.</p>";
     document.querySelector(".pop7").classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop7").classList.toggle("hilight");
-    }, 5000);
+    }, 4500);
 }
 
 function func7() {
@@ -146,15 +172,15 @@ function func7() {
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop8").classList.toggle("hilight");
-    }, 5000);
+    }, 4000);
 } 
-function func70() {
+function func71() {
     const pop = document.querySelector(".pop9");
 //    pop.innerHTML = "<p>Well, ATHLETES may need more protein.</p>";
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop9").classList.toggle("hilight");
-    }, 5000);
+    }, 4000);
 } 
 
 function func8() {
