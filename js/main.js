@@ -32,13 +32,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const selectVid = document.querySelector("#video_select");
     const selectTxt = document.querySelector("#text-track");
 
-    /*detect the language of the transcript selected and display it*/
-    const display = document.getElementById("transcript");
-    const transcript_en = document.getElementById("transcript-en");
-    const transcript_es = document.getElementById("transcript-es");
-    const showHide = document.getElementById("show-hide");
-
-
     selectVid.addEventListener("change", (e) => {
         selectVideo(e, vid);
     });
@@ -48,42 +41,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
         selectTrack(e, vid, id);
     });
 
-/* display the selected language transcript; clear display if no transcript selected */
-
-
-transcript_en.addEventListener(
-    "click",
-    function (e) {
-        e.preventDefault();
-        webvttTranscript("captions/katalyst.vtt", display);
-        console.log(display);
-    });
-
-transcript_es.addEventListener(
-    "click",
-    function (e) {
-        e.preventDefault();
-        webvttTranscript("captions/katalystes.vtt", display);
-    });
-
-showHide.addEventListener(
-    "click",
-    function (e) {
-        e.preventDefault();
-        webvttTranscript("captions/synergy.vtt", display);
-         if (e.target.innerHTML == "Show Transcript") {
-            e.target.innerHTML = "Hide Transcript";
-            display.style.display = "block";
-            console.log(e.target.innerHTML);
-        } else {
-            e.target.innerHTML = "Show Transcript";
-            display.style.display = "none";
-            console.log(e.target.innerHTML);
-        }
-    });
 });
 
-//the custom callback functions to trigger when a cuepoint is hit.
+/* Custom call functions triggered when a cuepoint is hit. 
+Displays supporting links and guides the user through video lesson points.*/
 
 function func1() {
     document.querySelector("#vid").style = "outline : 7px solid #ff5964";
@@ -94,8 +55,7 @@ function func11() {
 }
 function func2() {
     let pop = document.querySelector(".pop1");
- //   pop.innerHTML = "<p>Proteins are chains of amino acids.</p>";
-    document.querySelector(".pop1").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop1").classList.toggle("hilight");
     }, 4500);
@@ -106,8 +66,7 @@ function func3() {
 }
 function func4() {
     let pop = document.querySelector(".pop2");
-//    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
-    document.querySelector(".pop2").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop2").classList.toggle("hilight");
     }, 4500);
@@ -119,8 +78,7 @@ function func41() {
 } 
 function func42() {
     let pop = document.querySelector(".pop3");
-//    pop.innerHTML = "<p>Complete Protein Foods: <br> Provide all 9 essential amino acids.</p>";
-    document.querySelector(".pop3").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop3").classList.toggle("hilight");
     }, 4500);
@@ -132,24 +90,21 @@ function func5() {
 }
 function func51() {
     let pop = document.querySelector(".pop4");
-//    pop.innerHTML = "<p>thermic effect</p>";
-    document.querySelector(".pop4").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop4").classList.toggle("hilight");
     }, 4500);
 }
 function func52() {
     let pop = document.querySelector(".pop5");
-//    pop.innerHTML = "<p>3500 calories = 1 pound!</p>";
-    document.querySelector(".pop5").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop5").classList.toggle("hilight");
     }, 4000);
 }
 function func53() {
     let pop = document.querySelector(".pop6");
-//    pop.innerHTML = "<p>satiety</p>";
-    document.querySelector(".pop6").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop6").classList.toggle("hilight");
     }, 4000);
@@ -159,16 +114,13 @@ function func6() {
 }
 function func61() {
     let pop = document.querySelector(".pop7");
-//    pop.innerHTML = "<p>Caution: <br>Excessive protein can be detrimental.</p>";
-    document.querySelector(".pop7").classList.add("hilight");
+    pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop7").classList.toggle("hilight");
     }, 4500);
 }
-
 function func7() {
     const pop = document.querySelector(".pop8");
-//    pop.innerHTML = "<p>RDA is 0.8g per kg (NOT per pound)!!</p>";
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop8").classList.toggle("hilight");
@@ -176,7 +128,6 @@ function func7() {
 } 
 function func71() {
     const pop = document.querySelector(".pop9");
-//    pop.innerHTML = "<p>Well, ATHLETES may need more protein.</p>";
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop9").classList.toggle("hilight");
@@ -185,18 +136,16 @@ function func71() {
 
 function func8() {
     const pop = document.querySelector(".pop10");
- //   pop.innerHTML = "<p>Don't overdo it! <br> Calculate your protein needs.</p>";
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop10").classList.toggle("hilight");
-    }, 5000);
+    }, 4500);
     document.querySelector("#web").src = "https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein";
 }
 function func9() {
     const pop = document.querySelector(".pop11");
-//    pop.innerHTML = "<p>Note - Clinical data is still not conclusive!</p>";
     pop.classList.add("hilight");
     setTimeout(() => {
         document.querySelector(".pop11").classList.toggle("hilight");
-    }, 5000);
+    }, 4500);
 }

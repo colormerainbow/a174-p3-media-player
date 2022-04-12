@@ -8,7 +8,7 @@
     <title>ARTDM174 P3 AV Player</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/video_helpers.js" defer></script>
-    <script src="js/transcript.js" defer></script>  
+    <script src="js/transcript.js" defer></script>
     <script type="module" src="js/main.js"></script>
 </head>
 
@@ -30,161 +30,156 @@
 
     <main id="container">
         <section class="tag-line">
-            <h2>Expand your health potential &amp; let your inner health flourish through nutritional knowledge</h2>
+            <h3>Our Mission: Expand your health potential &amp; let your inner health flourish through nutritional knowledge</h3>
         </section>
-    <section class="lesson-container">
-        <div class="lesson-title">
+            <div class="lesson-title">
             <h2>The Benefits of Protein on Weight Management</h2>
-            <p class="guidance">Be aware that the proper nutritional balance for YOU depends on YOUR personal situation and needs. Empower yourself with nutritional knowledge and consult an RDN to understand what's best for you.</p>
-        </div>
-
-        <div class="lesson-notes">
-            <h3>
-                Key Messages:
-            </h3>
-            <ul>
-                <li class="pop1">Proteins are chains of amino acids, the building blocks of all cells.</li>
-                <li class="pop2">Complete Protein food sources provide all 9 essential amino acids in the right balance.</li>
-                <li class="pop3">Basal metabolic rate: amount of calories you burn at rest.</li>
-                <li class="pop4">Thermic effect: amount of calories used to digest proteins is higher than for fats or carbs.</li>
-                <li class="pop5">Thermic effect may amount up to 80-100 more calories burned each day.<br>3500 calories = 1 pound of body weight.</li>
-                <li class="pop6">A higher satiety index food is more filling and may prevent hunger longer.</li>
-                <li class="pop7">Caution: Excessive protein can be detrimental.</li>
-                <li class="pop8">RDA is 0.8g per kg (NOT per pound)!!<br>You can achieve a higher protein % in your diet by simply eating less fat and carbs!</li>
-                <li class="pop9">Athletes, body builders, and people in recovery may need more protein. </li> 
-                <li class="pop10">Don't overdo it! Calculate your protein needs to prevent excessive intake.</li>
-                <li class="pop11">Clinical data for high protein diets leading to weight loss is still not conclusive!</li>
-
-
-            </ul>
-        </div>
-        <div class="lesson-url">
-            <h3>
-                Explore Further:
-            </h3>
-            <ul>
-                <li><a href="https://en.wikipedia.org/wiki/Protein">What are Proteins?</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Essential_amino_acid">What are Essential Amino Acids?</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Complete_protein">What is a Complete Protein?</a></li>
-                <li><a href="https://www.webmd.com/food-recipes/protein">How much protein do I need?</a></li>
-                <li><a href="https://www.medicalnewstoday.com/articles/protein-intake">Calculate your personal protein needs.</a></li>
-                <li><a href="https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein">Avoid excessive protein &amp; select balanced whole food sources.</a></li>
-            </ul>
-        </div>
-    </section>
-<!--
-        <div class="col2">
-            <h4>Placeholder</h4>
-            <iframe id="web" src="" frameborder="0"></iframe>
-        </div>
-        -->
-
-    <!--
-    <h2>Nutritional Videos - Informative, but remember to check the source and maintain a balanced perspective. Not everything you hear is supported by conclusive evidence from clinical trials. The proper nutritional balance depends a lot your own personal situation and needs. Consult a dietition/nutritionist to help you understand how it affects you personally.</h2>
--->
-<section class="video-container">
-
-    <section class="vid-window">
-
-            <video id="vid" width="352" controls>
-                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
-                    type="video/mp4">
-
-                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm"
-                    type="video/webm">
-                <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv"
-                    type="video/ogg">
-
-                <track id="en" kind="captions" label="English (captions)" srclang="en" src="./captions/katalyst.vtt" default>
-
-                <track id="es" kind="subtitles" label="Espanol" srclang="es" src="./captions/katalystes.vtt">
-
-                <!-- fallback to text -->
-                <h2>The Benefits of Protein on Weight Loss</h2>
-                <p>Here is a link to the video file itself <a
-                        href="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Video
-                        File Here</a></p>
-                <p>Hi, I'm Kathy from Katalyst Fitness and Nutrition, and today I wanted to talk to you about protein
-                    and why it's so beneficial for weight loss.
-                </p>
-                <p>So, when you're trying to lose weight, protein is the key to getting you to your goal.</p>
-            </video>
-
-            <div id="controls">
-                <form id="video_form">
-                    <fieldset>
-                        <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)" value="Play" />
-                        <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)"
-                            value="Pause" />
-                        <input type="button" id="stop_button" class="ctl_btn" onclick="stopVideo(vid)"
-                            value="Stop" />
-                        <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
-                        <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
-                        <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)"
-                            value="Beginning" />
-                        <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
-                    </fieldset>
-                    <fieldset>
-                        <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)" value="Fast Forward >>" />
-                        <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
-                        <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
-                    </fieldset>
-                    <fieldset>
-                        <select id="video_select">
-                            <option>Select a video format...</option>
-                            <option
-                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">
-                                Katalyst (mp4)</option>
-                            <option
-                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">
-                                Katalyst (webm)</option>
-                            <option
-                                value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">
-                                Katalyst (ogv)</option>
-                                
-                        </select>
-
-						<select id="text-track">
-							<option>Captions / Subtitles...</option>
-							<option value="es">Espanol</option>
-							<option value="en">English (captions)</option>
-						</select>
-					</fieldset>
-                    <fieldset>
-                        <p>Video Segments</p>
-                        <input type="button" class="seek" onclick="seekVideo(vid, 50)" value="Essential Amino Acids" />
-                        <input type="button" class="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
-                        <input type="button" class="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
-                        <input type="button" class="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
-                        <input type="button" class="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
-                        <input type="button" class="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
-                    </fieldset>
-                    <fieldset class="transcript-link">            
-                        <a href="./transcripten.html">English Transcript</a>
-                        <a href="./transcriptes.html">Spanish Transcript</a>
-                    </fieldset>
-
-                </form>
+            <p class="guidance">The proper nutritional balance for YOU depends on YOUR personal situation and needs.
+                Empower yourself with nutritional knowledge to maintain a balanced perspective and consult an RDN to
+                understand what's best for you.</p>
             </div>
-<!-- remove this if no longer flashing messages up
-            <div class="pop hide">
-                <p>Test This!</p>
-            </div>
-            -->
-<!--remove this section and show transcripts on a link to a diff page or fix vtt files
-            <div class="show-captions">
-				<h3><a id="show-hide" href="#">Show Transcript</a></h3>
-				<a id="transcript-en" href="#">English</a>
-				<a id="transcript-es" href="#">Spanish</a>
-				<div id="transcript">content here</div>
-			</div>
-        -->
-    </section>
-    <section class="web-links">
+
+        <section class="lesson-container">
             <h4>Placeholder</h4>
-            <iframe id="web" src=""></iframe>
-    </section>
-</section>
+            <div class="lesson-notes">
+                <h3>
+                    Key Messages:
+                </h3>
+                <ul>
+                    <li class="pop1">Proteins are chains of amino acids, the building blocks of all cells.</li>
+                    <li class="pop2">Complete Protein food sources provide all 9 essential amino acids in the right
+                        balance.</li>
+                    <li class="pop3">Basal metabolic rate: amount of calories you burn at rest.</li>
+                    <li class="pop4">Thermic effect: amount of calories used to digest proteins is higher than for fats
+                        or carbs.</li>
+                    <li class="pop5">Thermic effect may amount up to 80-100 more calories burned each day.<br>3500
+                        calories = 1 pound of body weight.</li>
+                    <li class="pop6">A higher satiety index food is more filling and may prevent hunger longer.</li>
+                    <li class="pop7">Caution: Excessive protein can be detrimental.</li>
+                    <li class="pop8">RDA is 0.8g per kg (NOT per pound)!!<br>You can achieve a higher protein % in your
+                        diet by simply eating less fat and carbs!</li>
+                    <li class="pop9">Athletes, body builders, and people in recovery may need more protein. </li>
+                    <li class="pop10">Don't overdo it! Calculate your protein needs to prevent excessive intake.</li>
+                    <li class="pop11">Clinical data for high protein diets leading to weight loss is still not
+                        conclusive!</li>
+                </ul>
+            </div>
+            <div class="lesson-url">
+                <h3>
+                    Explore Further:
+                </h3>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Protein">What are Proteins?</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Essential_amino_acid">What are Essential Amino Acids?</a>
+                    </li>
+                    <li><a href="https://en.wikipedia.org/wiki/Complete_protein">What is a Complete Protein?</a></li>
+                    <li><a href="https://www.webmd.com/food-recipes/protein">How much protein do I need?</a></li>
+                    <li><a href="https://www.medicalnewstoday.com/articles/protein-intake">Calculate your personal
+                            protein needs.</a></li>
+                    <li><a
+                            href="https://www.mayoclinichealthsystem.org/hometown-health/speaking-of-health/are-you-getting-too-much-protein">Avoid
+                            excessive protein &amp; select balanced whole food sources.</a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="video-container">
+            <h4>Placeholder</h4>
+            <section class="vid-window">
+
+                <video id="vid" width="352" controls>
+                    <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4"
+                        type="video/mp4">
+
+                    <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm"
+                        type="video/webm">
+                    <source src="assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv"
+                        type="video/ogg">
+
+                    <track id="en" kind="captions" label="English (captions)" srclang="en" src="./captions/katalyst.vtt"
+                        default>
+
+                    <track id="es" kind="subtitles" label="Espanol" srclang="es" src="./captions/katalystes.vtt">
+
+                    <!-- fallback to text -->
+                    <h2>The Benefits of Protein on Weight Loss</h2>
+                    <p>Here is a link to the video file itself <a
+                            href="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">Video
+                            File Here</a></p>
+                    <p>Hi, I'm Kathy from Katalyst Fitness and Nutrition, and today I wanted to talk to you about
+                        protein
+                        and why it's so beneficial for weight loss.
+                    </p>
+                    <p>So, when you're trying to lose weight, protein is the key to getting you to your goal.</p>
+                </video>
+
+                <div id="controls">
+                    <form id="video_form">
+                        <fieldset>
+                            <input type="button" id="play_button" class="ctl_btn" onclick="playVideo(vid)"
+                                value="Play" />
+                            <input type="button" id="pause_button" class="ctl_btn" onclick="pauseVideo(vid)"
+                                value="Pause" />
+                            <input type="button" id="stop_button" class="ctl_btn" onclick="stopVideo(vid)"
+                                value="Stop" />
+                            <input type="button" id="mute" class="ctl_btn" onclick="muteVid(vid)" value="Mute" />
+                            <input type="button" id="unmute" class="ctl_btn" onclick="unmuteVid(vid)" value="Unmute" />
+                            <input type="button" id="rewind" class="ctl_btn" onclick="seekVideo(vid, 0)"
+                                value="Beginning" />
+                            <input type="button" id="end" class="ctl_btn" onclick="seekVideo(vid, 183)" value="End" />
+                        </fieldset>
+                        <fieldset>
+                            <input type=button id="ff" class="ctl_btn" onclick="playRate(vid,2)"
+                                value="Fast Forward >>" />
+                            <input type=button id="slo" class="ctl_btn" onclick="playRate(vid,.5)" value="Slo Mo >" />
+                            <input type=button id="normal" class="ctl_btn" onclick="playRate(vid,1)" value="Normal >" />
+                        </fieldset>
+                        <fieldset>
+                            <select id="video_select">
+                                <option>Select a video format...</option>
+                                <option
+                                    value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.mp4">
+                                    Katalyst (mp4)</option>
+                                <option
+                                    value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.webm">
+                                    Katalyst (webm)</option>
+                                <option
+                                    value="./assets/Katalyst_Fitness_and_Nutrition-_The_benefits_of_protein_on_weight_loss.ogv">
+                                    Katalyst (ogv)</option>
+
+                            </select>
+
+                            <select id="text-track">
+                                <option>Captions / Subtitles...</option>
+                                <option value="es">Espanol</option>
+                                <option value="en">English (captions)</option>
+                            </select>
+                        </fieldset>
+                        <fieldset>
+                            <p>Video Segments</p>
+                            <input type="button" class="seek" onclick="seekVideo(vid, 50)"
+                                value="Essential Amino Acids" />
+                            <input type="button" class="seek" onclick="seekVideo(vid, 69)" value="Weight Loss" />
+                            <input type="button" class="seek" onclick="seekVideo(vid, 84)" value="Thermic Effect" />
+                            <input type="button" class="seek" onclick="seekVideo(vid, 101)" value="Satiety Factor" />
+                            <input type="button" class="seek" onclick="seekVideo(vid, 117)" value="Clinical Study" />
+                            <input type="button" class="seek" onclick="seekVideo(vid, 136)" value="Protein Target" />
+                        </fieldset>
+                        <fieldset class="transcript-link">
+                            <a href="./transcripten.html">English Transcript</a>
+                            <a href="./transcriptes.html">Spanish Transcript</a>
+                        </fieldset>
+
+                    </form>
+                </div>
+
+            </section>
+            <section class="web-links">
+                <h4>Placeholder</h4>
+                <iframe id="web" src=""></iframe>
+            </section>
+        </section>
 
     </main>
 

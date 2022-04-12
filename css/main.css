@@ -2,27 +2,24 @@
 
 
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 #wrapper {
-    margin: 0 auto;
-    background: url(../images/foodwood4.jpg) fixed;
-    background-size: cover;
-    background-position: right;
-    font-family: 'Inter', sans-serif;
-    text-align: center;
+  margin: 0 auto;
+  background: url(../images/foodwood4.jpg) fixed;
+  background-size: cover;
+  background-position: right;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
 }
 
 header {
-    color: #f4f2ed;
-  //  background-color:#22223b;
+  color: #f4f2ed;
   background: rgba(0, 0, 0, .6);
-// background: url(../images/veglineddark2.jpg) fixed;
-// background-size: cover;
-// background-position: top;
-    padding: 2rem 0 1rem 0;
+  padding: 2rem 0 1rem 0;
 }
+
 .site-nav a {
   color: #f4f2ed;
   text-decoration: none;
@@ -35,207 +32,155 @@ header {
   justify-content: space-around;
   list-style: none;
 }
-/*use a background image here and remove backgnd color from id wrapper 
-.hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url(../images/sideborders.jpeg) fixed;
-  background-size: cover;
-  background-position: left;
-  overflow-y: scroll;
-} */
 
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: 'Handlee', cursive;
+}
 
-  h1,
-  h2 {
-      text-align:center;
-      font-family: 'Handlee', cursive;
-  }
-  h3 {
-    text-align: left;
-    padding-left: 1rem;
-  }
+h3 {
+  text-align: left;
+  padding-left: 1rem;
+}
 
-h4 {
+h4,
+.guidance,
+.tag-line {
   display: none;
 }
- 
+
+/* set the layout of the main container */
 #container {
-//  background-color: #e2fdff;
   background-color: #eef5db;
-    display:grid;
-    grid-gap: .5rem;
-    grid-template-columns: repeat(6, 1fr);
-    position: relative;
-    margin:auto;
-    max-width: 1024px;
-    padding: 1rem;
-  }
-  .tag-line {
-    grid-column: 1 / span 8;
-    padding: 1rem;
-  }
-  .lesson-container {
-    display: grid;
-    grid-gap: .5rem;
-    grid-template-rows: repeat(8, 1fr);
-    grid-column: 1 / span 2;
-  }
-  .video-container {
-    display: grid;
-    grid-gap: .5rem;
-    grid-template-rows: repeat(8, 1fr);
-    grid-column: 3 / span 4;
-  }
-  .lesson-title {
-    grid-row: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .guidance {
-    font-size: .8rem;
-    text-align: left;
-    padding: 0 .5rem 0 1rem;
-  }
-  .lesson-notes {
-    grid-row: 2 / span 2;
-    border:1px solid black;
-    font-size: .85rem;
-    text-align: left;
-  }
-  .lesson-url {
-    grid-row: 4 / span 2;
-    border:1px solid black;
-    font-size: .85rem;
-    text-align: left;
-  }
-  .vid-window {
-    grid-row: 1/span 3;
-    border:1px solid black;
- //   height: fit-content;
-    padding: 3rem 0 0 0;
-  }
-  .web-links {
-    grid-row: 4 / span 4;
-    border:1px solid black;
-    height: 45vh;
-  }
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  margin: auto;
+  max-width: 1024px;
+  padding: 1rem;
+}
+
+.tag-line {
+  grid-column: 1 / span 6;
+  padding: .5rem;
+  background-color: #e2fdff;
+  text-align: center;
+}
+
+.lesson-container {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column: 1 / span 2;
+}
+
+.video-container {
+  display: grid;
+  grid-gap: .5rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column: 3 / span 4;
+}
+
+.lesson-title {
+  grid-column: 1 / span 6;
+  display: flex;
+  flex-direction: column;
+}
+
+.guidance {
+  font-size: .8rem;
+  text-align: left;
+  padding: 0 .5rem 0 1rem;
+}
+
+.lesson-notes {
+  grid-row: 1 / span 1;
+  border: 1px solid black;
+  font-size: .8rem;
+  text-align: left;
+}
+
+.lesson-url {
+  grid-row: 2 / span 1;
+  border: 1px solid black;
+  font-size: .85rem;
+  text-align: left;
+}
+
+.vid-window {
+  grid-row: 1/span 1;
+  border: 1px solid black;
+  padding: 1rem 0 0 0;
+}
+
+.web-links {
+  grid-row: 2 / span 1;
+  border: 1px solid black;
+  height: 45vh;
+}
+
+#vid {
+  width: 280px;
+  height: 240px;
+  /* 352px 288px */
+}
+
+#controls {
+  padding: 1rem;
+}
+
+.transcript-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+iframe {
+  width: 100%;
+  height: 45vh;
+}
+
+#transcript-container {
+  background-color: #eef5db;
+  margin: auto;
+  max-width: 1024px;
+  padding: 3rem;
+}
+
+.transcript-main {
+  background-color: rgba(172, 201, 212, 0.7);
+  text-align: left;
+  padding: 1rem 2rem;
+}
+
+.seek:hover,
+.ctl_btn:hover {
+  background-color: #a8dadc;
+  font-weight: bold;
+}
+
+/* highlight animation on learning content during the video */
+.hilight {
+  transform: scale(1.1);
+  color: #fff;
+  background: rgba(0, 0, 0, .6);
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 700px) {
   #vid {
-    width:500px;
-    height:280px;
+    width: 500px;
+    height: 280px;
+  }
 
- //     width:352px;
- //     height:288px;
-  }
-  #controls {
-    padding: 1rem;
-  }
-  .transcript-link {
+  .guidance {
     display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-  }
-  iframe {
-      width:100%;
-      height:45vh;
-  }
-  #transcript-container {
-    background-color: #eef5db;
-  //  position: relative;
-    margin:auto;
-    max-width: 1024px;
-    padding: 3rem;
-  }
-  .transcript-main {
-    background-color: rgba(172, 201, 212, 0.7);
-    text-align: left;
-    padding: 1rem 2rem;
-  }
-  /*
-  #caption {
-    position: absolute;
-    width: 355px;
-    left: 0;
-    margin-top:-3.5em;
-    min-height:3em;
-    text-align: center;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: white;
-    text-shadow: black 1px 1px 3px;
-    padding-bottom: .5em;
-    background-color:hsla(250,10%,50%,0.8)
-  }
-  
-  #transcript span {
-    display:table-row;
-  }
-  */
-  
-  /* show the timings in square brackets before each "subtitle" in the transcript. 
-  #transcript [data-begin]:before {
-    content: " [" attr(data-begin) "s-" attr(data-end)"s]   "; 
-    font-size:80%; 
-    display:table-cell; 
-    padding-right:1em;
-  }
-  */
-  
- .seek:hover,
- .ctl_btn:hover {
-    background-color: #a8dadc;
-    font-weight: bold;
-  }
-  /*
-  .pop {
-      position:absolute;
-      top:0;
-      left:0;
-      background:rgba(99, 77, 55, .5);
-      color:#fff;
-      border:3px solid #ca6702;
-      padding:15px;
-      font-weight:bold;
-      z-index:3;
-    opacity: 1;
-    transition: all .1s;
-  }
-  
-  .hide {
-    opacity:0;
-    transition: all 3s;
-  }
-  */
-  .hilight {
-   transform: scale(1.1);
-    color: #fff;
-    background: rgba(0, 0, 0, .6);
-    transition: all 1s ease-in-out;
-  }
-    /*
-  @media screen and (max-width:600px) {
-    #container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(6, 1fr);
-    }
-  
-    .vid-window {
-      grid-column: 2;
-      grid-row: 3 / span 6;
-    }
   }
 
-  @media screen and (max-width:1000px) {
-    #container {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  
-    .vid-window {
-      grid-column: 2;
-    }
-    .web-links {
-      grid-column: 3;
-    }
+  .tag-line {
+    display: grid;
   }
-  */
+}
