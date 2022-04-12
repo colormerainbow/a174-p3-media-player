@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter&display=swap');
 
-/*
-dark #22223b
-grey #4a4e69
-taupe #9a8c98
-tan #c9ada7
-cream #f2e9e4
-neutral #d6ccc2
-peach highlight #e0afa0
-*/
-
 
 * {
     box-sizing: border-box;
@@ -17,7 +7,6 @@ peach highlight #e0afa0
 
 #wrapper {
     margin: 0 auto;
-//    background-color: #333533;
     background: url(../images/foodwood4.jpg) fixed;
     background-size: cover;
     background-position: right;
@@ -81,6 +70,7 @@ h4 {
     position: relative;
     margin:auto;
     max-width: 1024px;
+    padding: 1rem;
   }
   .tag-line {
     grid-column: 1 / span 8;
@@ -150,7 +140,18 @@ h4 {
       width:100%;
       height:45vh;
   }
-  
+  #transcript-container {
+    background-color: #eef5db;
+  //  position: relative;
+    margin:auto;
+    max-width: 1024px;
+    padding: 3rem;
+  }
+  .transcript-main {
+    background-color: rgba(172, 201, 212, 0.7);
+    text-align: left;
+    padding: 1rem 2rem;
+  }
   /*
   #caption {
     position: absolute;
