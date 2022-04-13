@@ -48,6 +48,7 @@ h3 {
 
 /*hide some content until the page is larger, or not at all */
 h4,
+.video_format,
 .guidance,
 .tag-line {
   display: none;
@@ -137,7 +138,7 @@ h4,
   padding: 1rem;
 }
 
-.transcript-link {
+.languages {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -182,7 +183,16 @@ button a,
   transition: all 1s ease-in-out;
 }
 
-/* expand the video and windows as screen size increases for better UX */
+/* ----Format for the site footer  -----*/
+
+footer {
+  color: #f4f2ed;
+  background: rgba(0, 0, 0, .6);
+  padding: 2rem;
+  font-size: .9rem;
+}
+
+/* expand the video and reveal more content as screen size increases for better UX */
 @media screen and (min-width: 700px) {
   #vid {
     width: 500px;
@@ -196,9 +206,4 @@ button a,
   .tag-line {
     display: grid;
   }
-}
-
-.lesson-notes,
-.lesson-url {
-  font-size: .9rem;
 }
