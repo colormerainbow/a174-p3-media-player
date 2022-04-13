@@ -1,14 +1,19 @@
 /* used starter code from tbennett and modified to fit the needs of Lab5 assignment */
 
-
 import { cueTimer } from "./modules/cuepoints.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
 
+    /*first display related info in the iframe for initial browsing */
+    document.querySelector("#web").src =
+    "https://www.britannica.com/science/protein";
+
+    /* video triggered interactive content to guide the user through the lesson */
     var myCues = [
         { seconds: 2, callback: func1 },
-        { seconds: 12, callback: func11 },
-        { seconds: 26, callback: func2 },
+        { seconds: 10, callback: func11 },
+        { seconds: 20, callback: func12 },
+        { seconds: 30, callback: func2 },
         { seconds: 44, callback: func3 },
         { seconds: 57, callback: func4 },
         { seconds: 61, callback: func41 },
@@ -52,6 +57,10 @@ function func1() {
 function func11() {
     document.querySelector("#web").src =
         "https://en.wikipedia.org/wiki/Protein";
+}
+function func12() {
+    document.querySelector("#web").src =
+        "https://www.hsph.harvard.edu/nutritionsource/what-should-you-eat/protein/";
 }
 function func2() {
     let pop = document.querySelector(".pop1");

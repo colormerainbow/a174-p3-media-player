@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Inter&display=swap');
 
-
 * {
   box-sizing: border-box;
 }
@@ -35,9 +34,11 @@ header {
 
 h1,
 h2,
-h3 {
+h3,
+.topic-title {
   text-align: center;
   font-family: 'Handlee', cursive;
+  font-weight: bold;
 }
 
 h3 {
@@ -45,15 +46,16 @@ h3 {
   padding-left: 1rem;
 }
 
+/*hide some content until the page is larger, or not at all */
 h4,
 .guidance,
 .tag-line {
   display: none;
 }
 
-/* set the layout of the main container */
+/* set the layout of the main container and its components*/
 #container {
-  background-color: #eef5db;
+  background-image: linear-gradient(#eef5db, #b8d8d8);
   display: grid;
   grid-gap: .5rem;
   grid-template-columns: repeat(6, 1fr);
@@ -66,7 +68,10 @@ h4,
 .tag-line {
   grid-column: 1 / span 6;
   padding: .5rem;
-  background-color: #e2fdff;
+  background-color: #b8d8d8;
+}
+
+.mission {
   text-align: center;
 }
 
@@ -91,8 +96,8 @@ h4,
 }
 
 .guidance {
-  font-size: .8rem;
-  text-align: left;
+  font-size: .85rem;
+  text-align: center;
   padding: 0 .5rem 0 1rem;
 }
 
@@ -157,9 +162,16 @@ iframe {
 }
 
 .seek:hover,
-.ctl_btn:hover {
+.ctl_btn:hover,
+button:hover {
   background-color: #a8dadc;
   font-weight: bold;
+}
+
+button a,
+.explore a {
+  text-decoration: none;
+  color: blue;
 }
 
 /* highlight animation on learning content during the video */
@@ -170,6 +182,7 @@ iframe {
   transition: all 1s ease-in-out;
 }
 
+/* expand the video and windows as screen size increases for better UX */
 @media screen and (min-width: 700px) {
   #vid {
     width: 500px;
@@ -183,4 +196,9 @@ iframe {
   .tag-line {
     display: grid;
   }
+}
+
+.lesson-notes,
+.lesson-url {
+  font-size: .9rem;
 }
